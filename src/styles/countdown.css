@@ -1,0 +1,256 @@
+.countdown-section {
+  padding: 80px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(45deg, 
+      #620080 25%, 
+      #8a2be2 75%);
+  position: relative;
+}
+
+.countdown-section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26 35.5C17.6 35.5 4 29.5 4 17.5 4 9.5 11.7 3 21.5 3c5.1 0 8.7 2.5 11.5 6 2.8-3.5 6.4-6 11.5-6C40.3 3 48 9.5 48 17.5c0 12-13.6 18-22 18z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  z-index: 0;
+  pointer-events: none;
+}
+
+.countdown-container {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.countdown-title {
+  margin-bottom: 50px;
+  color: white;
+}
+
+.countdown-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(255, 50, 150, 0.5);
+  animation: fadeInUp 1s ease;
+}
+
+.countdown-title p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.countdown-timer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.countdown-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 0 40px rgba(255, 0, 150, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: cardPopIn 0.8s ease backwards;
+}
+
+.countdown-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.countdown-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.countdown-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.countdown-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.countdown-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 60px rgba(255, 0, 150, 0.5);
+}
+
+@keyframes cardPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.countdown-value {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 20px rgba(255, 50, 150, 0.6);
+  margin-bottom: 10px;
+  font-family: 'Courier New', monospace;
+  animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .countdown-section {
+    padding: 60px 15px;
+  }
+
+  .countdown-title h2 {
+    font-size: 2rem;
+  }
+
+  .countdown-title p {
+    font-size: 1rem;
+  }
+
+  .countdown-timer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .countdown-card {
+    padding: 25px 15px;
+  }
+
+  .countdown-value {
+    font-size: 2.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-timer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .countdown-value {
+    font-size: 2rem;
+  }
+
+  .countdown-label {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Enhanced countdown animations */
+.countdown-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.countdown-card:hover::before {
+  opacity: 1;
+}
+
+/* Number flip animation */
+.countdown-value {
+  position: relative;
+  display: inline-block;
+}
+
+.countdown-value::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* Enhanced responsive transitions */
+@media (max-width: 768px) {
+  .countdown-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .countdown-card:active {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .countdown-value {
+    animation: none;
+  }
+  
+  .countdown-card {
+    animation: none;
+  }
+}
+
