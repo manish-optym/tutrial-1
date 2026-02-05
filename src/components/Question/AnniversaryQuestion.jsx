@@ -3,20 +3,20 @@ import ParticleBackground from '../Intro/ParticleBackground';
 import '../../styles/question.css';
 
 const stepsData = [
-  { text: "Soch lo 🤔", image: "/assets/think.gif" },
-  { text: "Ek baar aur soch lo 😢", image: "/assets/sadface.gif" },
-  { text: "Please maan jao 🥺", image: "/assets/plz.gif" },
-  { text: "Itna bhaav mat khao 😠", image: "/assets/attitude.gif" },
-  { text: "Sach me nahi? 😭", image: "/assets/cry.gif" },
-  { text: "Cute ho yaar tum 😍", image: "/assets/cute.gif" },
-  { text: "Last chance ❤️", image: "/assets/loveme.gif" }
+  { text: "Soch lo 🤔", image: `${process.env.PUBLIC_URL}/assets/think.gif` },
+  { text: "Ek baar aur soch lo 😢", image: `${process.env.PUBLIC_URL}/assets/sadface.gif` },
+  { text: "Please maan jao 🥺", image: `${process.env.PUBLIC_URL}/assets/plz.gif` },
+  { text: "Itna bhaav mat khao 😠", image: `${process.env.PUBLIC_URL}/assets/attitude.gif` },
+  { text: "Sach me nahi? 😭", image: `${process.env.PUBLIC_URL}/assets/cry.gif` },
+  { text: "Cute ho yaar tum 😍", image: `${process.env.PUBLIC_URL}/assets/cute.gif` },
+  { text: "Last chance ❤️", image: `${process.env.PUBLIC_URL}/assets/loveme.gif` }
 ];
 
 const AnniversaryQuestion = ({ onYesClick }) => {
   const [step, setStep] = useState(0);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [currentText, setCurrentText] = useState("Will you continue this beautiful journey with me?");
-  const [currentImage, setCurrentImage] = useState("/assets/loveme.gif");
+  const [currentImage, setCurrentImage] = useState(`${process.env.PUBLIC_URL}/assets/loveme.gif`);
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0, rotation: 0 });
   const [showFinalQuestion, setShowFinalQuestion] = useState(false);
   const noButtonRef = useRef(null);
@@ -40,7 +40,7 @@ const AnniversaryQuestion = ({ onYesClick }) => {
 
   const handleYesClick = () => {
     setCurrentText("Mujhe pata tha tum maan jaogi ❤️");
-    setCurrentImage("/assets/thanks.gif");
+    setCurrentImage(`${process.env.PUBLIC_URL}/assets/thanks.gif`);
     if (onYesClick) {
       onYesClick();
     }

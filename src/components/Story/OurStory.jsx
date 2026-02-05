@@ -11,7 +11,7 @@ const OurStory = () => {
       month: 'February',
       title: 'The Beginning',
       description: 'Our journey started on February 5th, 2022. That\'s the day we decided together 😊. Sarswati puja is a day we can never forget ❤️. It was the first time i held your hand. A day that changed everything. It was like all my prayer are answered.',
-      image: '/images/p16.png',
+      image: `${process.env.PUBLIC_URL}/images/p16.png`,
       side: 'left'
     },
     {
@@ -19,7 +19,7 @@ const OurStory = () => {
       month: 'Spring',
       title: 'First Adventures',
       description: 'We explored new places together, creating memories that would last a lifetime. Digha and mandar mani was the first adventure of our life together. Who can forget the waves that washed both of us off🤣🤣 and then the Sofa. Every moment felt magical and full of possibilities.',
-      image: '/assets/flow.gif',
+      image: `${process.env.PUBLIC_URL}/assets/flow.gif`,
       side: 'right'
     },
     {
@@ -27,7 +27,7 @@ const OurStory = () => {
       month: 'Throughout',
       title: 'Growing Together',
       description: 'Through ups and downs, we learned about each other and ourselves. Our bond grew stronger with each passing day, building a foundation of trust and love.',
-      image: '/images/p6.png',
+      image: `${process.env.PUBLIC_URL}/images/p6.png`,
       side: 'left'
     },
     {
@@ -35,7 +35,7 @@ const OurStory = () => {
       month: 'All Year',
       title: 'Deeper Connection',
       description: 'We discovered new depths to our relationship. Shared dreams, supported each other\'s goals, and found joy in the simple moments together.',
-      image: '/images/p15.png',
+      image: `${process.env.PUBLIC_URL}/images/p15.png`,
       side: 'right'
     },
     {
@@ -43,7 +43,7 @@ const OurStory = () => {
       month: 'Present',
       title: '4 Years Strong',
       description: 'Four years of laughter, love, and growth. Every day with you is a gift, and I\'m grateful for every moment we\'ve shared and all the ones to come.',
-      image: '/images/p14.jpeg',
+      image: `${process.env.PUBLIC_URL}/images/p14.jpeg`,
       side: 'left'
     }
   ];

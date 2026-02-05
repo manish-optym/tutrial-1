@@ -265,7 +265,7 @@ const MusicPlayer = ({ currentStep, onYesClicked }) => {
       {/* Intro music - Main Agar Kahoon Instrumental */}
       <audio
         ref={introAudioRef}
-        src="/audio/Main Agar Kahoon Instrumental.mp3"
+        src={`${process.env.PUBLIC_URL}/audio/Main Agar Kahoon Instrumental.mp3`}
         loop
         onEnded={handleIntroEnded}
         preload="auto"
@@ -274,7 +274,7 @@ const MusicPlayer = ({ currentStep, onYesClicked }) => {
       {/* Yes celebration sound - SRK Yahoo */}
       <audio
         ref={yesAudioRef}
-        src="/audio/srk_yahoo_oso.mp3"
+        src={`${process.env.PUBLIC_URL}/audio/srk_yahoo_oso.mp3`}
         onEnded={handleYesEnded}
         preload="auto"
       />
@@ -282,7 +282,7 @@ const MusicPlayer = ({ currentStep, onYesClicked }) => {
       {/* Sections music - Kisi Roz Tumse */}
       <audio
         ref={sectionsAudioRef}
-        src="/audio/kisi_roz_tumse.mp3"
+        src={`${process.env.PUBLIC_URL}/audio/kisi_roz_tumse.mp3`}
         loop
         onEnded={handleSectionsEnded}
         preload="auto"

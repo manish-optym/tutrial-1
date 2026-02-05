@@ -15,10 +15,10 @@ const GiftAnimation = () => {
     
     if (giftNumber === 1) {
       setGift1Clicked(true);
-      setSelectedVideo('/assets/v1.mp4');
+      setSelectedVideo(`${process.env.PUBLIC_URL}/assets/v1.mp4`);
     } else if (giftNumber === 2) {
       setGift2Clicked(true);
-      setSelectedVideo('/assets/v2.mp4');
+      setSelectedVideo(`${process.env.PUBLIC_URL}/assets/v2.mp4`);
     }
   };
 

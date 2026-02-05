@@ -15,22 +15,22 @@ const PhotoGallery = () => {
 
   // Actual doodle images from the images folder
   const images = [
-    { id: 1, src: encodeImagePath('/images/Couple Drawings Simple.jpg'), alt: 'Couple Drawing', flipSrc: encodeImagePath('/images/p1.png') },
-    { id: 2, src: encodeImagePath('/images/Cute Drawing.jpg'), alt: 'Cute Drawing', flipSrc: encodeImagePath('/images/p2.png') },
-    { id: 3, src: encodeImagePath('/images/Cute Drawing (1).jpg'), alt: 'Cute Drawing 2', flipSrc: encodeImagePath('/images/p3.png') },
-    { id: 4, src: encodeImagePath('/images/Love❤️.jpg'), alt: 'Love Drawing', flipSrc: encodeImagePath('/images/p4.png') },
-    { id: 5, src: encodeImagePath('/images/Yes please ❤.jpg'), alt: 'Yes Please', flipSrc: encodeImagePath('/images/p5.png') },
-    { id: 6, src: encodeImagePath('/images/☕︎.jpg'), alt: 'Coffee Drawing', flipSrc: encodeImagePath('/images/p6.png') },
-    { id: 7, src: encodeImagePath('/images/☕︎ (1).jpg'), alt: 'Coffee Drawing 2', flipSrc: encodeImagePath('/images/p7.png') },
-    { id: 8, src: encodeImagePath('/images/download.jpg'), alt: 'Doodle 1', flipSrc: encodeImagePath('/images/p8.png') },
-    { id: 9, src: encodeImagePath('/images/download (1).jpg'), alt: 'Doodle 2', flipSrc: encodeImagePath('/images/p9.jpg') },
-    { id: 10, src: encodeImagePath('/images/download (2).jpg'), alt: 'Doodle 3', flipSrc: encodeImagePath('/images/p10.jpg') },
-    { id: 11, src: encodeImagePath('/images/download (3).jpg'), alt: 'Doodle 4', flipSrc: encodeImagePath('/images/p11.jpg') },
-    { id: 12, src: encodeImagePath('/images/download (4).jpg'), alt: 'Doodle 5', flipSrc: encodeImagePath('/images/p12.jpg') },
-    { id: 13, src: encodeImagePath('/images/download (5).jpg'), alt: 'Doodle 6' },
-    { id: 14, src: encodeImagePath('/images/download (6).jpg'), alt: 'Doodle 7' },
-    { id: 15, src: encodeImagePath('/images/download (7).jpg'), alt: 'Doodle 8' },
-    { id: 16, src: encodeImagePath('/images/download (8).jpg'), alt: 'Doodle 9' }
+    { id: 1, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/Couple Drawings Simple.jpg`), alt: 'Couple Drawing', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p1.png`) },
+    { id: 2, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/Cute Drawing.jpg`), alt: 'Cute Drawing', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p2.png`) },
+    { id: 3, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/Cute Drawing (1).jpg`), alt: 'Cute Drawing 2', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p3.png`) },
+    { id: 4, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/Love❤️.jpg`), alt: 'Love Drawing', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p4.png`) },
+    { id: 5, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/Yes please ❤.jpg`), alt: 'Yes Please', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p5.png`) },
+    { id: 6, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/☕︎.jpg`), alt: 'Coffee Drawing', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p6.png`) },
+    { id: 7, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/☕︎ (1).jpg`), alt: 'Coffee Drawing 2', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p7.png`) },
+    { id: 8, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/download.jpg`), alt: 'Doodle 1', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p8.png`) },
+    { id: 9, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/download (1).jpg`), alt: 'Doodle 2', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p9.jpg`) },
+    { id: 10, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/download (2).jpg`), alt: 'Doodle 3', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p10.jpg`) },
+    { id: 11, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/download (3).jpg`), alt: 'Doodle 4', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p11.jpg`) },
+    { id: 12, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/download (4).jpg`), alt: 'Doodle 5', flipSrc: encodeImagePath(`${process.env.PUBLIC_URL}/images/p12.jpg`) },
+    { id: 13, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/download (5).jpg`), alt: 'Doodle 6' },
+    { id: 14, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/download (6).jpg`), alt: 'Doodle 7' },
+    { id: 15, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/download (7).jpg`), alt: 'Doodle 8' },
+    { id: 16, src: encodeImagePath(`${process.env.PUBLIC_URL}/images/download (8).jpg`), alt: 'Doodle 9' }
   ];
 
   const openLightbox = (image) => {
